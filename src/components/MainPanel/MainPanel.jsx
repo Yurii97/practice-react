@@ -1,22 +1,29 @@
-// import { Components } from 'react';
+import { SectionPanels, ButtonStyled } from './MainPanel.styled';
+import { ContainerStyled } from '../_styled/container.styled';
 
-// class MainPanel extends Components {}
-
-function MainPanel({ title, options }) {
+function MainPanel({ title, options, bgColor }) {
   return (
-    <section>
-      <h2>{title}</h2>
-      <p>UAH</p>
-      <ul>
-        {options.map(({ period, sum }) => (
-          <li key={period}>
-            <span>{period}</span>
-            <span>{sum}</span>
-          </li>
-        ))}
-      </ul>
-      <button type="button">+</button>
-    </section>
+    <SectionPanels>
+      <ContainerStyled>
+        <div>
+          <div className="containerHeader">
+            <h2>{title}</h2>
+            <p>UAH</p>
+          </div>
+          <ul>
+            {options.map(({ period, sum }) => (
+              <li key={period}>
+                <span>{period}</span>
+                <span>{sum}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <ButtonStyled type="button" bgColor={bgColor}>
+          +
+        </ButtonStyled>
+      </ContainerStyled>
+    </SectionPanels>
   );
 }
 

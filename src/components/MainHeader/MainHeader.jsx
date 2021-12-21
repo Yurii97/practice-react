@@ -1,10 +1,13 @@
 import { MainHeaderStyled } from './MainHeader.styled';
+import { ContainerStyled } from '../_styled/container.styled';
 
 function MainHeader() {
   return (
     <MainHeaderStyled>
-      <button type="button">Menu</button>
-      <h1>Журнал Витрат</h1>
+      <ContainerStyled>
+        <button type="button">Menu</button>
+        <h1>Журнал Витрат</h1>
+      </ContainerStyled>
     </MainHeaderStyled>
   );
 }

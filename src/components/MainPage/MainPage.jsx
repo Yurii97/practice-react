@@ -7,9 +7,9 @@ function MainPage() {
   return (
     <>
       <MainHeader />
-      <MainPanel title={'витрати'} options={options.costPanelOptions} />
-      <MainPanel title={'доходи'} options={options.incomesPanelOptions} />
-      <MainPanel title={'баланс'} options={options.balancePanelOptions} />
+      <MainPanel title={'витрати'} options={options.costPanelOptions} bgColor="orange" />
+      <MainPanel title={'доходи'} options={options.incomesPanelOptions} bgColor="green" />
+      <MainPanel title={'баланс'} options={options.balancePanelOptions} bgColor="purple" />
       <StatisticsBtns />
     </>
   );
